@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_package = "com.SDJ3.protobuf";
+
+service SlaughterHouse {
+    rpc GetData(GetDataRequest) returns (GetDataResponse) {}
+}
+
+message GetDataRequest {
+    string query = 1;
+}
+
+message GetDataResponse {
+    repeated Data data = 1;
+}
+
+message Data {
+    int64 Id = 1;
+    int64 regNum = 2;
+    string date = 3;
+    int32 weight = 4;
+    string origin = 5;
+}

@@ -1390,16 +1390,10 @@ public final class House {
     long getId();
 
     /**
-     * <code>string regNum = 2;</code>
+     * <code>int64 regNum = 2;</code>
      * @return The regNum.
      */
-    java.lang.String getRegNum();
-    /**
-     * <code>string regNum = 2;</code>
-     * @return The bytes for regNum.
-     */
-    com.google.protobuf.ByteString
-        getRegNumBytes();
+    long getRegNum();
 
     /**
      * <code>string date = 3;</code>
@@ -1444,7 +1438,6 @@ public final class House {
       super(builder);
     }
     private Data() {
-      regNum_ = "";
       date_ = "";
       origin_ = "";
     }
@@ -1484,10 +1477,9 @@ public final class House {
               id_ = input.readInt64();
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 16: {
 
-              regNum_ = s;
+              regNum_ = input.readInt64();
               break;
             }
             case 26: {
@@ -1553,41 +1545,14 @@ public final class House {
     }
 
     public static final int REGNUM_FIELD_NUMBER = 2;
-    private volatile java.lang.Object regNum_;
+    private long regNum_;
     /**
-     * <code>string regNum = 2;</code>
+     * <code>int64 regNum = 2;</code>
      * @return The regNum.
      */
     @java.lang.Override
-    public java.lang.String getRegNum() {
-      java.lang.Object ref = regNum_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        regNum_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string regNum = 2;</code>
-     * @return The bytes for regNum.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRegNumBytes() {
-      java.lang.Object ref = regNum_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        regNum_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getRegNum() {
+      return regNum_;
     }
 
     public static final int DATE_FIELD_NUMBER = 3;
@@ -1694,8 +1659,8 @@ public final class House {
       if (id_ != 0L) {
         output.writeInt64(1, id_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regNum_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, regNum_);
+      if (regNum_ != 0L) {
+        output.writeInt64(2, regNum_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, date_);
@@ -1719,8 +1684,9 @@ public final class House {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, id_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regNum_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, regNum_);
+      if (regNum_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, regNum_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, date_);
@@ -1749,8 +1715,8 @@ public final class House {
 
       if (getId()
           != other.getId()) return false;
-      if (!getRegNum()
-          .equals(other.getRegNum())) return false;
+      if (getRegNum()
+          != other.getRegNum()) return false;
       if (!getDate()
           .equals(other.getDate())) return false;
       if (getWeight()
@@ -1772,7 +1738,8 @@ public final class House {
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getId());
       hash = (37 * hash) + REGNUM_FIELD_NUMBER;
-      hash = (53 * hash) + getRegNum().hashCode();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRegNum());
       hash = (37 * hash) + DATE_FIELD_NUMBER;
       hash = (53 * hash) + getDate().hashCode();
       hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
@@ -1914,7 +1881,7 @@ public final class House {
         super.clear();
         id_ = 0L;
 
-        regNum_ = "";
+        regNum_ = 0L;
 
         date_ = "";
 
@@ -2004,9 +1971,8 @@ public final class House {
         if (other.getId() != 0L) {
           setId(other.getId());
         }
-        if (!other.getRegNum().isEmpty()) {
-          regNum_ = other.regNum_;
-          onChanged();
+        if (other.getRegNum() != 0L) {
+          setRegNum(other.getRegNum());
         }
         if (!other.getDate().isEmpty()) {
           date_ = other.date_;
@@ -2079,78 +2045,33 @@ public final class House {
         return this;
       }
 
-      private java.lang.Object regNum_ = "";
+      private long regNum_ ;
       /**
-       * <code>string regNum = 2;</code>
+       * <code>int64 regNum = 2;</code>
        * @return The regNum.
        */
-      public java.lang.String getRegNum() {
-        java.lang.Object ref = regNum_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          regNum_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getRegNum() {
+        return regNum_;
       }
       /**
-       * <code>string regNum = 2;</code>
-       * @return The bytes for regNum.
-       */
-      public com.google.protobuf.ByteString
-          getRegNumBytes() {
-        java.lang.Object ref = regNum_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          regNum_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string regNum = 2;</code>
+       * <code>int64 regNum = 2;</code>
        * @param value The regNum to set.
        * @return This builder for chaining.
        */
-      public Builder setRegNum(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setRegNum(long value) {
+        
         regNum_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string regNum = 2;</code>
+       * <code>int64 regNum = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRegNum() {
         
-        regNum_ = getDefaultInstance().getRegNum();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string regNum = 2;</code>
-       * @param value The bytes for regNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRegNumBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        regNum_ = value;
+        regNum_ = 0L;
         onChanged();
         return this;
       }
@@ -2417,10 +2338,10 @@ public final class House {
       "\n\013House.proto\"\037\n\016GetDataRequest\022\r\n\005query" +
       "\030\001 \001(\t\"&\n\017GetDataResponse\022\023\n\004data\030\001 \003(\0132" +
       "\005.Data\"P\n\004Data\022\n\n\002Id\030\001 \001(\003\022\016\n\006regNum\030\002 \001" +
-      "(\t\022\014\n\004date\030\003 \001(\t\022\016\n\006weight\030\004 \001(\005\022\016\n\006orig" +
-      "in\030\005 \001(\t2@\n\016SlaughterHouse\022.\n\007GetData\022\017." +
-      "GetDataRequest\032\020.GetDataResponse\"\000B\023\n\021co" +
-      "m.SDJ3.protobufb\006proto3"
+      "(\003\022\014\n\004date\030\003 \001(\t\022\016\n\006weight\030\004 \001(\005\022\016\n\006orig" +
+      "in\030\005 \001(\t2J\n\016SlaughterHouse\0228\n\021GetDataAll" +
+      "Animals\022\017.GetDataRequest\032\020.GetDataRespon" +
+      "se\"\000B\023\n\021com.SDJ3.protobufb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

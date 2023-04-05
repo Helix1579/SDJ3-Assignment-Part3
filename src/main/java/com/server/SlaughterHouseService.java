@@ -10,7 +10,7 @@ import java.util.List;
 public class SlaughterHouseService extends SlaughterHouseGrpc.SlaughterHouseImplBase
 {
     @Override
-    public void getData(House.GetDataRequest request, StreamObserver<House.GetDataResponse> responseObserver)
+    public void getDataAllAnimals(House.GetDataRequest request, StreamObserver<House.GetDataResponse> responseObserver)
     {
         List<House.Data> data = executeQuery(request.getQuery());
 
@@ -18,6 +18,8 @@ public class SlaughterHouseService extends SlaughterHouseGrpc.SlaughterHouseImpl
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+
+    //Get all animals
     private List<House.Data> executeQuery(String query)
     {
         String url = "jdbc:postgresql://localhost:5432/postgres";
@@ -40,7 +42,7 @@ public class SlaughterHouseService extends SlaughterHouseGrpc.SlaughterHouseImpl
                 int weight = resultSet.getInt(4);
                 String origin = resultSet.getString(5);
 
-                House.Data data = House.Data.newBuilder().setId(Id).setRegNum(String.valueOf(regNum))
+                House.Data data = House.Data.newBuilder().setId(Id).setRegNum(regNum)
                         .setDate(date).setWeight(weight).setOrigin(origin).build();
 
                 dataList.add(data);

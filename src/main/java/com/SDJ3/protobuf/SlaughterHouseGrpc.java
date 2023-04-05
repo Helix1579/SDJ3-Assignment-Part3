@@ -15,34 +15,34 @@ public final class SlaughterHouseGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.SDJ3.protobuf.House.GetDataRequest,
-      com.SDJ3.protobuf.House.GetDataResponse> getGetDataMethod;
+      com.SDJ3.protobuf.House.GetDataResponse> getGetDataAllAnimalsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetData",
+      fullMethodName = SERVICE_NAME + '/' + "GetDataAllAnimals",
       requestType = com.SDJ3.protobuf.House.GetDataRequest.class,
       responseType = com.SDJ3.protobuf.House.GetDataResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.SDJ3.protobuf.House.GetDataRequest,
-      com.SDJ3.protobuf.House.GetDataResponse> getGetDataMethod() {
-    io.grpc.MethodDescriptor<com.SDJ3.protobuf.House.GetDataRequest, com.SDJ3.protobuf.House.GetDataResponse> getGetDataMethod;
-    if ((getGetDataMethod = SlaughterHouseGrpc.getGetDataMethod) == null) {
+      com.SDJ3.protobuf.House.GetDataResponse> getGetDataAllAnimalsMethod() {
+    io.grpc.MethodDescriptor<com.SDJ3.protobuf.House.GetDataRequest, com.SDJ3.protobuf.House.GetDataResponse> getGetDataAllAnimalsMethod;
+    if ((getGetDataAllAnimalsMethod = SlaughterHouseGrpc.getGetDataAllAnimalsMethod) == null) {
       synchronized (SlaughterHouseGrpc.class) {
-        if ((getGetDataMethod = SlaughterHouseGrpc.getGetDataMethod) == null) {
-          SlaughterHouseGrpc.getGetDataMethod = getGetDataMethod =
+        if ((getGetDataAllAnimalsMethod = SlaughterHouseGrpc.getGetDataAllAnimalsMethod) == null) {
+          SlaughterHouseGrpc.getGetDataAllAnimalsMethod = getGetDataAllAnimalsMethod =
               io.grpc.MethodDescriptor.<com.SDJ3.protobuf.House.GetDataRequest, com.SDJ3.protobuf.House.GetDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDataAllAnimals"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.SDJ3.protobuf.House.GetDataRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.SDJ3.protobuf.House.GetDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SlaughterHouseMethodDescriptorSupplier("GetData"))
+              .setSchemaDescriptor(new SlaughterHouseMethodDescriptorSupplier("GetDataAllAnimals"))
               .build();
         }
       }
     }
-    return getGetDataMethod;
+    return getGetDataAllAnimalsMethod;
   }
 
   /**
@@ -95,20 +95,20 @@ public final class SlaughterHouseGrpc {
 
     /**
      */
-    public void getData(com.SDJ3.protobuf.House.GetDataRequest request,
+    public void getDataAllAnimals(com.SDJ3.protobuf.House.GetDataRequest request,
         io.grpc.stub.StreamObserver<com.SDJ3.protobuf.House.GetDataResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataAllAnimalsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetDataMethod(),
+            getGetDataAllAnimalsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.SDJ3.protobuf.House.GetDataRequest,
                 com.SDJ3.protobuf.House.GetDataResponse>(
-                  this, METHODID_GET_DATA)))
+                  this, METHODID_GET_DATA_ALL_ANIMALS)))
           .build();
     }
   }
@@ -129,10 +129,10 @@ public final class SlaughterHouseGrpc {
 
     /**
      */
-    public void getData(com.SDJ3.protobuf.House.GetDataRequest request,
+    public void getDataAllAnimals(com.SDJ3.protobuf.House.GetDataRequest request,
         io.grpc.stub.StreamObserver<com.SDJ3.protobuf.House.GetDataResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetDataMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetDataAllAnimalsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -152,9 +152,9 @@ public final class SlaughterHouseGrpc {
 
     /**
      */
-    public com.SDJ3.protobuf.House.GetDataResponse getData(com.SDJ3.protobuf.House.GetDataRequest request) {
+    public com.SDJ3.protobuf.House.GetDataResponse getDataAllAnimals(com.SDJ3.protobuf.House.GetDataRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetDataMethod(), getCallOptions(), request);
+          getChannel(), getGetDataAllAnimalsMethod(), getCallOptions(), request);
     }
   }
 
@@ -174,14 +174,14 @@ public final class SlaughterHouseGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.SDJ3.protobuf.House.GetDataResponse> getData(
+    public com.google.common.util.concurrent.ListenableFuture<com.SDJ3.protobuf.House.GetDataResponse> getDataAllAnimals(
         com.SDJ3.protobuf.House.GetDataRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetDataMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetDataAllAnimalsMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_GET_DATA = 0;
+  private static final int METHODID_GET_DATA_ALL_ANIMALS = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -200,8 +200,8 @@ public final class SlaughterHouseGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_DATA:
-          serviceImpl.getData((com.SDJ3.protobuf.House.GetDataRequest) request,
+        case METHODID_GET_DATA_ALL_ANIMALS:
+          serviceImpl.getDataAllAnimals((com.SDJ3.protobuf.House.GetDataRequest) request,
               (io.grpc.stub.StreamObserver<com.SDJ3.protobuf.House.GetDataResponse>) responseObserver);
           break;
         default:
@@ -265,7 +265,7 @@ public final class SlaughterHouseGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SlaughterHouseFileDescriptorSupplier())
-              .addMethod(getGetDataMethod())
+              .addMethod(getGetDataAllAnimalsMethod())
               .build();
         }
       }

@@ -17,7 +17,7 @@ public class client
         String query1 = "SELECT * FROM assignment.animal";
 
         House.GetDataRequest request = House.GetDataRequest.newBuilder().setQuery(query1).build();
-        House.GetDataResponse response = stub.getData(request);
+        House.GetDataResponse response = stub.getDataAllAnimals(request);
 
         for (House.Data data : response.getDataList())
         {

@@ -3,7 +3,7 @@ syntax = "proto3";
 option java_package = "com.SDJ3.protobuf";
 
 service SlaughterHouse {
-    rpc GetData(GetDataRequest) returns (GetDataResponse) {}
+    rpc GetDataAllAnimals(GetDataRequest) returns (GetDataResponse) {}
 }
 
 message GetDataRequest {

@@ -6,7 +6,6 @@ import io.grpc.*;
 
 public class client
 {
-
     public static void main(String[] args)
     {
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8080)
@@ -19,12 +18,12 @@ public class client
         House.GetDataRequest request = House.GetDataRequest.newBuilder().setQuery(query1).build();
         House.GetDataResponse response = stub.getDataAllAnimals(request);
 
-        for (House.Data data : response.getDataList())
+        for (House.Data_Animal data : response.getData1List())
         {
-            System.out.println(" Id --> " + data.getId() + "\t" + " regNum --> " + data.getRegNum()
+            System.out.println(" Id --> " + data.getAnimalId() + "\t" + " regNum --> " + data.getAnimalRegNum()
                     + "\t" + " date --> " + data.getDate() + "\t"  + " weight --> " + data.getWeight()
                     + "\t" + " origin --> " + data.getOrigin());
         }
-        channel.shutdown();
+        //channel.shutdown();
     }
 }

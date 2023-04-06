@@ -589,27 +589,51 @@ public final class House {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
-    java.util.List<com.SDJ3.protobuf.House.Data> 
-        getDataList();
+    java.util.List<com.SDJ3.protobuf.House.Data_Animal> 
+        getData1List();
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
-    com.SDJ3.protobuf.House.Data getData(int index);
+    com.SDJ3.protobuf.House.Data_Animal getData1(int index);
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
-    int getDataCount();
+    int getData1Count();
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
-    java.util.List<? extends com.SDJ3.protobuf.House.DataOrBuilder> 
-        getDataOrBuilderList();
+    java.util.List<? extends com.SDJ3.protobuf.House.Data_AnimalOrBuilder> 
+        getData1OrBuilderList();
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
-    com.SDJ3.protobuf.House.DataOrBuilder getDataOrBuilder(
+    com.SDJ3.protobuf.House.Data_AnimalOrBuilder getData1OrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    java.util.List<com.SDJ3.protobuf.House.Data_Product> 
+        getData2List();
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    com.SDJ3.protobuf.House.Data_Product getData2(int index);
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    int getData2Count();
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    java.util.List<? extends com.SDJ3.protobuf.House.Data_ProductOrBuilder> 
+        getData2OrBuilderList();
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    com.SDJ3.protobuf.House.Data_ProductOrBuilder getData2OrBuilder(
         int index);
   }
   /**
@@ -625,7 +649,8 @@ public final class House {
       super(builder);
     }
     private GetDataResponse() {
-      data_ = java.util.Collections.emptyList();
+      data1_ = java.util.Collections.emptyList();
+      data2_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -661,11 +686,20 @@ public final class House {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                data_ = new java.util.ArrayList<com.SDJ3.protobuf.House.Data>();
+                data1_ = new java.util.ArrayList<com.SDJ3.protobuf.House.Data_Animal>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              data_.add(
-                  input.readMessage(com.SDJ3.protobuf.House.Data.parser(), extensionRegistry));
+              data1_.add(
+                  input.readMessage(com.SDJ3.protobuf.House.Data_Animal.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                data2_ = new java.util.ArrayList<com.SDJ3.protobuf.House.Data_Product>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              data2_.add(
+                  input.readMessage(com.SDJ3.protobuf.House.Data_Product.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -686,7 +720,10 @@ public final class House {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          data_ = java.util.Collections.unmodifiableList(data_);
+          data1_ = java.util.Collections.unmodifiableList(data1_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          data2_ = java.util.Collections.unmodifiableList(data2_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -705,44 +742,84 @@ public final class House {
               com.SDJ3.protobuf.House.GetDataResponse.class, com.SDJ3.protobuf.House.GetDataResponse.Builder.class);
     }
 
-    public static final int DATA_FIELD_NUMBER = 1;
-    private java.util.List<com.SDJ3.protobuf.House.Data> data_;
+    public static final int DATA1_FIELD_NUMBER = 1;
+    private java.util.List<com.SDJ3.protobuf.House.Data_Animal> data1_;
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<com.SDJ3.protobuf.House.Data> getDataList() {
-      return data_;
+    public java.util.List<com.SDJ3.protobuf.House.Data_Animal> getData1List() {
+      return data1_;
     }
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.SDJ3.protobuf.House.DataOrBuilder> 
-        getDataOrBuilderList() {
-      return data_;
+    public java.util.List<? extends com.SDJ3.protobuf.House.Data_AnimalOrBuilder> 
+        getData1OrBuilderList() {
+      return data1_;
     }
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
     @java.lang.Override
-    public int getDataCount() {
-      return data_.size();
+    public int getData1Count() {
+      return data1_.size();
     }
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
     @java.lang.Override
-    public com.SDJ3.protobuf.House.Data getData(int index) {
-      return data_.get(index);
+    public com.SDJ3.protobuf.House.Data_Animal getData1(int index) {
+      return data1_.get(index);
     }
     /**
-     * <code>repeated .Data data = 1;</code>
+     * <code>repeated .Data_Animal data1 = 1;</code>
      */
     @java.lang.Override
-    public com.SDJ3.protobuf.House.DataOrBuilder getDataOrBuilder(
+    public com.SDJ3.protobuf.House.Data_AnimalOrBuilder getData1OrBuilder(
         int index) {
-      return data_.get(index);
+      return data1_.get(index);
+    }
+
+    public static final int DATA2_FIELD_NUMBER = 2;
+    private java.util.List<com.SDJ3.protobuf.House.Data_Product> data2_;
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.SDJ3.protobuf.House.Data_Product> getData2List() {
+      return data2_;
+    }
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.SDJ3.protobuf.House.Data_ProductOrBuilder> 
+        getData2OrBuilderList() {
+      return data2_;
+    }
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    @java.lang.Override
+    public int getData2Count() {
+      return data2_.size();
+    }
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    @java.lang.Override
+    public com.SDJ3.protobuf.House.Data_Product getData2(int index) {
+      return data2_.get(index);
+    }
+    /**
+     * <code>repeated .Data_Product data2 = 2;</code>
+     */
+    @java.lang.Override
+    public com.SDJ3.protobuf.House.Data_ProductOrBuilder getData2OrBuilder(
+        int index) {
+      return data2_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -759,8 +836,11 @@ public final class House {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < data_.size(); i++) {
-        output.writeMessage(1, data_.get(i));
+      for (int i = 0; i < data1_.size(); i++) {
+        output.writeMessage(1, data1_.get(i));
+      }
+      for (int i = 0; i < data2_.size(); i++) {
+        output.writeMessage(2, data2_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -771,9 +851,13 @@ public final class House {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < data_.size(); i++) {
+      for (int i = 0; i < data1_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, data_.get(i));
+          .computeMessageSize(1, data1_.get(i));
+      }
+      for (int i = 0; i < data2_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, data2_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -790,8 +874,10 @@ public final class House {
       }
       com.SDJ3.protobuf.House.GetDataResponse other = (com.SDJ3.protobuf.House.GetDataResponse) obj;
 
-      if (!getDataList()
-          .equals(other.getDataList())) return false;
+      if (!getData1List()
+          .equals(other.getData1List())) return false;
+      if (!getData2List()
+          .equals(other.getData2List())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -803,9 +889,13 @@ public final class House {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDataCount() > 0) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getDataList().hashCode();
+      if (getData1Count() > 0) {
+        hash = (37 * hash) + DATA1_FIELD_NUMBER;
+        hash = (53 * hash) + getData1List().hashCode();
+      }
+      if (getData2Count() > 0) {
+        hash = (37 * hash) + DATA2_FIELD_NUMBER;
+        hash = (53 * hash) + getData2List().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -935,17 +1025,24 @@ public final class House {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getDataFieldBuilder();
+          getData1FieldBuilder();
+          getData2FieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (dataBuilder_ == null) {
-          data_ = java.util.Collections.emptyList();
+        if (data1Builder_ == null) {
+          data1_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          dataBuilder_.clear();
+          data1Builder_.clear();
+        }
+        if (data2Builder_ == null) {
+          data2_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          data2Builder_.clear();
         }
         return this;
       }
@@ -974,14 +1071,23 @@ public final class House {
       public com.SDJ3.protobuf.House.GetDataResponse buildPartial() {
         com.SDJ3.protobuf.House.GetDataResponse result = new com.SDJ3.protobuf.House.GetDataResponse(this);
         int from_bitField0_ = bitField0_;
-        if (dataBuilder_ == null) {
+        if (data1Builder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            data_ = java.util.Collections.unmodifiableList(data_);
+            data1_ = java.util.Collections.unmodifiableList(data1_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.data_ = data_;
+          result.data1_ = data1_;
         } else {
-          result.data_ = dataBuilder_.build();
+          result.data1_ = data1Builder_.build();
+        }
+        if (data2Builder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            data2_ = java.util.Collections.unmodifiableList(data2_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.data2_ = data2_;
+        } else {
+          result.data2_ = data2Builder_.build();
         }
         onBuilt();
         return result;
@@ -1031,29 +1137,55 @@ public final class House {
 
       public Builder mergeFrom(com.SDJ3.protobuf.House.GetDataResponse other) {
         if (other == com.SDJ3.protobuf.House.GetDataResponse.getDefaultInstance()) return this;
-        if (dataBuilder_ == null) {
-          if (!other.data_.isEmpty()) {
-            if (data_.isEmpty()) {
-              data_ = other.data_;
+        if (data1Builder_ == null) {
+          if (!other.data1_.isEmpty()) {
+            if (data1_.isEmpty()) {
+              data1_ = other.data1_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureDataIsMutable();
-              data_.addAll(other.data_);
+              ensureData1IsMutable();
+              data1_.addAll(other.data1_);
             }
             onChanged();
           }
         } else {
-          if (!other.data_.isEmpty()) {
-            if (dataBuilder_.isEmpty()) {
-              dataBuilder_.dispose();
-              dataBuilder_ = null;
-              data_ = other.data_;
+          if (!other.data1_.isEmpty()) {
+            if (data1Builder_.isEmpty()) {
+              data1Builder_.dispose();
+              data1Builder_ = null;
+              data1_ = other.data1_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              dataBuilder_ = 
+              data1Builder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getDataFieldBuilder() : null;
+                   getData1FieldBuilder() : null;
             } else {
-              dataBuilder_.addAllMessages(other.data_);
+              data1Builder_.addAllMessages(other.data1_);
+            }
+          }
+        }
+        if (data2Builder_ == null) {
+          if (!other.data2_.isEmpty()) {
+            if (data2_.isEmpty()) {
+              data2_ = other.data2_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureData2IsMutable();
+              data2_.addAll(other.data2_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.data2_.isEmpty()) {
+            if (data2Builder_.isEmpty()) {
+              data2Builder_.dispose();
+              data2Builder_ = null;
+              data2_ = other.data2_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              data2Builder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getData2FieldBuilder() : null;
+            } else {
+              data2Builder_.addAllMessages(other.data2_);
             }
           }
         }
@@ -1087,244 +1219,484 @@ public final class House {
       }
       private int bitField0_;
 
-      private java.util.List<com.SDJ3.protobuf.House.Data> data_ =
+      private java.util.List<com.SDJ3.protobuf.House.Data_Animal> data1_ =
         java.util.Collections.emptyList();
-      private void ensureDataIsMutable() {
+      private void ensureData1IsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          data_ = new java.util.ArrayList<com.SDJ3.protobuf.House.Data>(data_);
+          data1_ = new java.util.ArrayList<com.SDJ3.protobuf.House.Data_Animal>(data1_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.SDJ3.protobuf.House.Data, com.SDJ3.protobuf.House.Data.Builder, com.SDJ3.protobuf.House.DataOrBuilder> dataBuilder_;
+          com.SDJ3.protobuf.House.Data_Animal, com.SDJ3.protobuf.House.Data_Animal.Builder, com.SDJ3.protobuf.House.Data_AnimalOrBuilder> data1Builder_;
 
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public java.util.List<com.SDJ3.protobuf.House.Data> getDataList() {
-        if (dataBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(data_);
+      public java.util.List<com.SDJ3.protobuf.House.Data_Animal> getData1List() {
+        if (data1Builder_ == null) {
+          return java.util.Collections.unmodifiableList(data1_);
         } else {
-          return dataBuilder_.getMessageList();
+          return data1Builder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public int getDataCount() {
-        if (dataBuilder_ == null) {
-          return data_.size();
+      public int getData1Count() {
+        if (data1Builder_ == null) {
+          return data1_.size();
         } else {
-          return dataBuilder_.getCount();
+          return data1Builder_.getCount();
         }
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public com.SDJ3.protobuf.House.Data getData(int index) {
-        if (dataBuilder_ == null) {
-          return data_.get(index);
+      public com.SDJ3.protobuf.House.Data_Animal getData1(int index) {
+        if (data1Builder_ == null) {
+          return data1_.get(index);
         } else {
-          return dataBuilder_.getMessage(index);
+          return data1Builder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public Builder setData(
-          int index, com.SDJ3.protobuf.House.Data value) {
-        if (dataBuilder_ == null) {
+      public Builder setData1(
+          int index, com.SDJ3.protobuf.House.Data_Animal value) {
+        if (data1Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureDataIsMutable();
-          data_.set(index, value);
+          ensureData1IsMutable();
+          data1_.set(index, value);
           onChanged();
         } else {
-          dataBuilder_.setMessage(index, value);
+          data1Builder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public Builder setData(
-          int index, com.SDJ3.protobuf.House.Data.Builder builderForValue) {
-        if (dataBuilder_ == null) {
-          ensureDataIsMutable();
-          data_.set(index, builderForValue.build());
+      public Builder setData1(
+          int index, com.SDJ3.protobuf.House.Data_Animal.Builder builderForValue) {
+        if (data1Builder_ == null) {
+          ensureData1IsMutable();
+          data1_.set(index, builderForValue.build());
           onChanged();
         } else {
-          dataBuilder_.setMessage(index, builderForValue.build());
+          data1Builder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public Builder addData(com.SDJ3.protobuf.House.Data value) {
-        if (dataBuilder_ == null) {
+      public Builder addData1(com.SDJ3.protobuf.House.Data_Animal value) {
+        if (data1Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureDataIsMutable();
-          data_.add(value);
+          ensureData1IsMutable();
+          data1_.add(value);
           onChanged();
         } else {
-          dataBuilder_.addMessage(value);
+          data1Builder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public Builder addData(
-          int index, com.SDJ3.protobuf.House.Data value) {
-        if (dataBuilder_ == null) {
+      public Builder addData1(
+          int index, com.SDJ3.protobuf.House.Data_Animal value) {
+        if (data1Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureDataIsMutable();
-          data_.add(index, value);
+          ensureData1IsMutable();
+          data1_.add(index, value);
           onChanged();
         } else {
-          dataBuilder_.addMessage(index, value);
+          data1Builder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public Builder addData(
-          com.SDJ3.protobuf.House.Data.Builder builderForValue) {
-        if (dataBuilder_ == null) {
-          ensureDataIsMutable();
-          data_.add(builderForValue.build());
+      public Builder addData1(
+          com.SDJ3.protobuf.House.Data_Animal.Builder builderForValue) {
+        if (data1Builder_ == null) {
+          ensureData1IsMutable();
+          data1_.add(builderForValue.build());
           onChanged();
         } else {
-          dataBuilder_.addMessage(builderForValue.build());
+          data1Builder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public Builder addData(
-          int index, com.SDJ3.protobuf.House.Data.Builder builderForValue) {
-        if (dataBuilder_ == null) {
-          ensureDataIsMutable();
-          data_.add(index, builderForValue.build());
+      public Builder addData1(
+          int index, com.SDJ3.protobuf.House.Data_Animal.Builder builderForValue) {
+        if (data1Builder_ == null) {
+          ensureData1IsMutable();
+          data1_.add(index, builderForValue.build());
           onChanged();
         } else {
-          dataBuilder_.addMessage(index, builderForValue.build());
+          data1Builder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public Builder addAllData(
-          java.lang.Iterable<? extends com.SDJ3.protobuf.House.Data> values) {
-        if (dataBuilder_ == null) {
-          ensureDataIsMutable();
+      public Builder addAllData1(
+          java.lang.Iterable<? extends com.SDJ3.protobuf.House.Data_Animal> values) {
+        if (data1Builder_ == null) {
+          ensureData1IsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, data_);
+              values, data1_);
           onChanged();
         } else {
-          dataBuilder_.addAllMessages(values);
+          data1Builder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public Builder clearData() {
-        if (dataBuilder_ == null) {
-          data_ = java.util.Collections.emptyList();
+      public Builder clearData1() {
+        if (data1Builder_ == null) {
+          data1_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          dataBuilder_.clear();
+          data1Builder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public Builder removeData(int index) {
-        if (dataBuilder_ == null) {
-          ensureDataIsMutable();
-          data_.remove(index);
+      public Builder removeData1(int index) {
+        if (data1Builder_ == null) {
+          ensureData1IsMutable();
+          data1_.remove(index);
           onChanged();
         } else {
-          dataBuilder_.remove(index);
+          data1Builder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public com.SDJ3.protobuf.House.Data.Builder getDataBuilder(
+      public com.SDJ3.protobuf.House.Data_Animal.Builder getData1Builder(
           int index) {
-        return getDataFieldBuilder().getBuilder(index);
+        return getData1FieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public com.SDJ3.protobuf.House.DataOrBuilder getDataOrBuilder(
+      public com.SDJ3.protobuf.House.Data_AnimalOrBuilder getData1OrBuilder(
           int index) {
-        if (dataBuilder_ == null) {
-          return data_.get(index);  } else {
-          return dataBuilder_.getMessageOrBuilder(index);
+        if (data1Builder_ == null) {
+          return data1_.get(index);  } else {
+          return data1Builder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public java.util.List<? extends com.SDJ3.protobuf.House.DataOrBuilder> 
-           getDataOrBuilderList() {
-        if (dataBuilder_ != null) {
-          return dataBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends com.SDJ3.protobuf.House.Data_AnimalOrBuilder> 
+           getData1OrBuilderList() {
+        if (data1Builder_ != null) {
+          return data1Builder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(data_);
+          return java.util.Collections.unmodifiableList(data1_);
         }
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public com.SDJ3.protobuf.House.Data.Builder addDataBuilder() {
-        return getDataFieldBuilder().addBuilder(
-            com.SDJ3.protobuf.House.Data.getDefaultInstance());
+      public com.SDJ3.protobuf.House.Data_Animal.Builder addData1Builder() {
+        return getData1FieldBuilder().addBuilder(
+            com.SDJ3.protobuf.House.Data_Animal.getDefaultInstance());
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public com.SDJ3.protobuf.House.Data.Builder addDataBuilder(
+      public com.SDJ3.protobuf.House.Data_Animal.Builder addData1Builder(
           int index) {
-        return getDataFieldBuilder().addBuilder(
-            index, com.SDJ3.protobuf.House.Data.getDefaultInstance());
+        return getData1FieldBuilder().addBuilder(
+            index, com.SDJ3.protobuf.House.Data_Animal.getDefaultInstance());
       }
       /**
-       * <code>repeated .Data data = 1;</code>
+       * <code>repeated .Data_Animal data1 = 1;</code>
        */
-      public java.util.List<com.SDJ3.protobuf.House.Data.Builder> 
-           getDataBuilderList() {
-        return getDataFieldBuilder().getBuilderList();
+      public java.util.List<com.SDJ3.protobuf.House.Data_Animal.Builder> 
+           getData1BuilderList() {
+        return getData1FieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.SDJ3.protobuf.House.Data, com.SDJ3.protobuf.House.Data.Builder, com.SDJ3.protobuf.House.DataOrBuilder> 
-          getDataFieldBuilder() {
-        if (dataBuilder_ == null) {
-          dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.SDJ3.protobuf.House.Data, com.SDJ3.protobuf.House.Data.Builder, com.SDJ3.protobuf.House.DataOrBuilder>(
-                  data_,
+          com.SDJ3.protobuf.House.Data_Animal, com.SDJ3.protobuf.House.Data_Animal.Builder, com.SDJ3.protobuf.House.Data_AnimalOrBuilder> 
+          getData1FieldBuilder() {
+        if (data1Builder_ == null) {
+          data1Builder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.SDJ3.protobuf.House.Data_Animal, com.SDJ3.protobuf.House.Data_Animal.Builder, com.SDJ3.protobuf.House.Data_AnimalOrBuilder>(
+                  data1_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          data_ = null;
+          data1_ = null;
         }
-        return dataBuilder_;
+        return data1Builder_;
+      }
+
+      private java.util.List<com.SDJ3.protobuf.House.Data_Product> data2_ =
+        java.util.Collections.emptyList();
+      private void ensureData2IsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          data2_ = new java.util.ArrayList<com.SDJ3.protobuf.House.Data_Product>(data2_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.SDJ3.protobuf.House.Data_Product, com.SDJ3.protobuf.House.Data_Product.Builder, com.SDJ3.protobuf.House.Data_ProductOrBuilder> data2Builder_;
+
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public java.util.List<com.SDJ3.protobuf.House.Data_Product> getData2List() {
+        if (data2Builder_ == null) {
+          return java.util.Collections.unmodifiableList(data2_);
+        } else {
+          return data2Builder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public int getData2Count() {
+        if (data2Builder_ == null) {
+          return data2_.size();
+        } else {
+          return data2Builder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public com.SDJ3.protobuf.House.Data_Product getData2(int index) {
+        if (data2Builder_ == null) {
+          return data2_.get(index);
+        } else {
+          return data2Builder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public Builder setData2(
+          int index, com.SDJ3.protobuf.House.Data_Product value) {
+        if (data2Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureData2IsMutable();
+          data2_.set(index, value);
+          onChanged();
+        } else {
+          data2Builder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public Builder setData2(
+          int index, com.SDJ3.protobuf.House.Data_Product.Builder builderForValue) {
+        if (data2Builder_ == null) {
+          ensureData2IsMutable();
+          data2_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          data2Builder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public Builder addData2(com.SDJ3.protobuf.House.Data_Product value) {
+        if (data2Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureData2IsMutable();
+          data2_.add(value);
+          onChanged();
+        } else {
+          data2Builder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public Builder addData2(
+          int index, com.SDJ3.protobuf.House.Data_Product value) {
+        if (data2Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureData2IsMutable();
+          data2_.add(index, value);
+          onChanged();
+        } else {
+          data2Builder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public Builder addData2(
+          com.SDJ3.protobuf.House.Data_Product.Builder builderForValue) {
+        if (data2Builder_ == null) {
+          ensureData2IsMutable();
+          data2_.add(builderForValue.build());
+          onChanged();
+        } else {
+          data2Builder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public Builder addData2(
+          int index, com.SDJ3.protobuf.House.Data_Product.Builder builderForValue) {
+        if (data2Builder_ == null) {
+          ensureData2IsMutable();
+          data2_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          data2Builder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public Builder addAllData2(
+          java.lang.Iterable<? extends com.SDJ3.protobuf.House.Data_Product> values) {
+        if (data2Builder_ == null) {
+          ensureData2IsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, data2_);
+          onChanged();
+        } else {
+          data2Builder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public Builder clearData2() {
+        if (data2Builder_ == null) {
+          data2_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          data2Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public Builder removeData2(int index) {
+        if (data2Builder_ == null) {
+          ensureData2IsMutable();
+          data2_.remove(index);
+          onChanged();
+        } else {
+          data2Builder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public com.SDJ3.protobuf.House.Data_Product.Builder getData2Builder(
+          int index) {
+        return getData2FieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public com.SDJ3.protobuf.House.Data_ProductOrBuilder getData2OrBuilder(
+          int index) {
+        if (data2Builder_ == null) {
+          return data2_.get(index);  } else {
+          return data2Builder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public java.util.List<? extends com.SDJ3.protobuf.House.Data_ProductOrBuilder> 
+           getData2OrBuilderList() {
+        if (data2Builder_ != null) {
+          return data2Builder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(data2_);
+        }
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public com.SDJ3.protobuf.House.Data_Product.Builder addData2Builder() {
+        return getData2FieldBuilder().addBuilder(
+            com.SDJ3.protobuf.House.Data_Product.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public com.SDJ3.protobuf.House.Data_Product.Builder addData2Builder(
+          int index) {
+        return getData2FieldBuilder().addBuilder(
+            index, com.SDJ3.protobuf.House.Data_Product.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Data_Product data2 = 2;</code>
+       */
+      public java.util.List<com.SDJ3.protobuf.House.Data_Product.Builder> 
+           getData2BuilderList() {
+        return getData2FieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.SDJ3.protobuf.House.Data_Product, com.SDJ3.protobuf.House.Data_Product.Builder, com.SDJ3.protobuf.House.Data_ProductOrBuilder> 
+          getData2FieldBuilder() {
+        if (data2Builder_ == null) {
+          data2Builder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.SDJ3.protobuf.House.Data_Product, com.SDJ3.protobuf.House.Data_Product.Builder, com.SDJ3.protobuf.House.Data_ProductOrBuilder>(
+                  data2_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          data2_ = null;
+        }
+        return data2Builder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1379,21 +1751,21 @@ public final class House {
 
   }
 
-  public interface DataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Data)
+  public interface Data_AnimalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Data_Animal)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 Id = 1;</code>
-     * @return The id.
+     * <code>int64 animal_Id = 1;</code>
+     * @return The animalId.
      */
-    long getId();
+    long getAnimalId();
 
     /**
-     * <code>int64 regNum = 2;</code>
-     * @return The regNum.
+     * <code>int64 animal_regNum = 2;</code>
+     * @return The animalRegNum.
      */
-    long getRegNum();
+    long getAnimalRegNum();
 
     /**
      * <code>string date = 3;</code>
@@ -1426,18 +1798,18 @@ public final class House {
         getOriginBytes();
   }
   /**
-   * Protobuf type {@code Data}
+   * Protobuf type {@code Data_Animal}
    */
-  public static final class Data extends
+  public static final class Data_Animal extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Data)
-      DataOrBuilder {
+      // @@protoc_insertion_point(message_implements:Data_Animal)
+      Data_AnimalOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Data.newBuilder() to construct.
-    private Data(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Data_Animal.newBuilder() to construct.
+    private Data_Animal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Data() {
+    private Data_Animal() {
       date_ = "";
       origin_ = "";
     }
@@ -1446,7 +1818,7 @@ public final class House {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new Data();
+      return new Data_Animal();
     }
 
     @java.lang.Override
@@ -1454,7 +1826,7 @@ public final class House {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Data(
+    private Data_Animal(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1474,12 +1846,12 @@ public final class House {
               break;
             case 8: {
 
-              id_ = input.readInt64();
+              animalId_ = input.readInt64();
               break;
             }
             case 16: {
 
-              regNum_ = input.readInt64();
+              animalRegNum_ = input.readInt64();
               break;
             }
             case 26: {
@@ -1522,37 +1894,37 @@ public final class House {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.SDJ3.protobuf.House.internal_static_Data_descriptor;
+      return com.SDJ3.protobuf.House.internal_static_Data_Animal_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.SDJ3.protobuf.House.internal_static_Data_fieldAccessorTable
+      return com.SDJ3.protobuf.House.internal_static_Data_Animal_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.SDJ3.protobuf.House.Data.class, com.SDJ3.protobuf.House.Data.Builder.class);
+              com.SDJ3.protobuf.House.Data_Animal.class, com.SDJ3.protobuf.House.Data_Animal.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
-    private long id_;
+    public static final int ANIMAL_ID_FIELD_NUMBER = 1;
+    private long animalId_;
     /**
-     * <code>int64 Id = 1;</code>
-     * @return The id.
+     * <code>int64 animal_Id = 1;</code>
+     * @return The animalId.
      */
     @java.lang.Override
-    public long getId() {
-      return id_;
+    public long getAnimalId() {
+      return animalId_;
     }
 
-    public static final int REGNUM_FIELD_NUMBER = 2;
-    private long regNum_;
+    public static final int ANIMAL_REGNUM_FIELD_NUMBER = 2;
+    private long animalRegNum_;
     /**
-     * <code>int64 regNum = 2;</code>
-     * @return The regNum.
+     * <code>int64 animal_regNum = 2;</code>
+     * @return The animalRegNum.
      */
     @java.lang.Override
-    public long getRegNum() {
-      return regNum_;
+    public long getAnimalRegNum() {
+      return animalRegNum_;
     }
 
     public static final int DATE_FIELD_NUMBER = 3;
@@ -1656,11 +2028,11 @@ public final class House {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0L) {
-        output.writeInt64(1, id_);
+      if (animalId_ != 0L) {
+        output.writeInt64(1, animalId_);
       }
-      if (regNum_ != 0L) {
-        output.writeInt64(2, regNum_);
+      if (animalRegNum_ != 0L) {
+        output.writeInt64(2, animalRegNum_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, date_);
@@ -1680,13 +2052,13 @@ public final class House {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0L) {
+      if (animalId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, id_);
+          .computeInt64Size(1, animalId_);
       }
-      if (regNum_ != 0L) {
+      if (animalRegNum_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, regNum_);
+          .computeInt64Size(2, animalRegNum_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, date_);
@@ -1708,15 +2080,15 @@ public final class House {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.SDJ3.protobuf.House.Data)) {
+      if (!(obj instanceof com.SDJ3.protobuf.House.Data_Animal)) {
         return super.equals(obj);
       }
-      com.SDJ3.protobuf.House.Data other = (com.SDJ3.protobuf.House.Data) obj;
+      com.SDJ3.protobuf.House.Data_Animal other = (com.SDJ3.protobuf.House.Data_Animal) obj;
 
-      if (getId()
-          != other.getId()) return false;
-      if (getRegNum()
-          != other.getRegNum()) return false;
+      if (getAnimalId()
+          != other.getAnimalId()) return false;
+      if (getAnimalRegNum()
+          != other.getAnimalRegNum()) return false;
       if (!getDate()
           .equals(other.getDate())) return false;
       if (getWeight()
@@ -1734,12 +2106,12 @@ public final class House {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (37 * hash) + ANIMAL_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getId());
-      hash = (37 * hash) + REGNUM_FIELD_NUMBER;
+          getAnimalId());
+      hash = (37 * hash) + ANIMAL_REGNUM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getRegNum());
+          getAnimalRegNum());
       hash = (37 * hash) + DATE_FIELD_NUMBER;
       hash = (53 * hash) + getDate().hashCode();
       hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
@@ -1751,69 +2123,69 @@ public final class House {
       return hash;
     }
 
-    public static com.SDJ3.protobuf.House.Data parseFrom(
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.SDJ3.protobuf.House.Data parseFrom(
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.SDJ3.protobuf.House.Data parseFrom(
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.SDJ3.protobuf.House.Data parseFrom(
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.SDJ3.protobuf.House.Data parseFrom(byte[] data)
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.SDJ3.protobuf.House.Data parseFrom(
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.SDJ3.protobuf.House.Data parseFrom(java.io.InputStream input)
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.SDJ3.protobuf.House.Data parseFrom(
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.SDJ3.protobuf.House.Data parseDelimitedFrom(java.io.InputStream input)
+    public static com.SDJ3.protobuf.House.Data_Animal parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.SDJ3.protobuf.House.Data parseDelimitedFrom(
+    public static com.SDJ3.protobuf.House.Data_Animal parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.SDJ3.protobuf.House.Data parseFrom(
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.SDJ3.protobuf.House.Data parseFrom(
+    public static com.SDJ3.protobuf.House.Data_Animal parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1826,7 +2198,7 @@ public final class House {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.SDJ3.protobuf.House.Data prototype) {
+    public static Builder newBuilder(com.SDJ3.protobuf.House.Data_Animal prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1842,26 +2214,26 @@ public final class House {
       return builder;
     }
     /**
-     * Protobuf type {@code Data}
+     * Protobuf type {@code Data_Animal}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Data)
-        com.SDJ3.protobuf.House.DataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:Data_Animal)
+        com.SDJ3.protobuf.House.Data_AnimalOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.SDJ3.protobuf.House.internal_static_Data_descriptor;
+        return com.SDJ3.protobuf.House.internal_static_Data_Animal_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.SDJ3.protobuf.House.internal_static_Data_fieldAccessorTable
+        return com.SDJ3.protobuf.House.internal_static_Data_Animal_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.SDJ3.protobuf.House.Data.class, com.SDJ3.protobuf.House.Data.Builder.class);
+                com.SDJ3.protobuf.House.Data_Animal.class, com.SDJ3.protobuf.House.Data_Animal.Builder.class);
       }
 
-      // Construct using com.SDJ3.protobuf.House.Data.newBuilder()
+      // Construct using com.SDJ3.protobuf.House.Data_Animal.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1879,9 +2251,9 @@ public final class House {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0L;
+        animalId_ = 0L;
 
-        regNum_ = 0L;
+        animalRegNum_ = 0L;
 
         date_ = "";
 
@@ -1895,17 +2267,17 @@ public final class House {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.SDJ3.protobuf.House.internal_static_Data_descriptor;
+        return com.SDJ3.protobuf.House.internal_static_Data_Animal_descriptor;
       }
 
       @java.lang.Override
-      public com.SDJ3.protobuf.House.Data getDefaultInstanceForType() {
-        return com.SDJ3.protobuf.House.Data.getDefaultInstance();
+      public com.SDJ3.protobuf.House.Data_Animal getDefaultInstanceForType() {
+        return com.SDJ3.protobuf.House.Data_Animal.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.SDJ3.protobuf.House.Data build() {
-        com.SDJ3.protobuf.House.Data result = buildPartial();
+      public com.SDJ3.protobuf.House.Data_Animal build() {
+        com.SDJ3.protobuf.House.Data_Animal result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1913,10 +2285,10 @@ public final class House {
       }
 
       @java.lang.Override
-      public com.SDJ3.protobuf.House.Data buildPartial() {
-        com.SDJ3.protobuf.House.Data result = new com.SDJ3.protobuf.House.Data(this);
-        result.id_ = id_;
-        result.regNum_ = regNum_;
+      public com.SDJ3.protobuf.House.Data_Animal buildPartial() {
+        com.SDJ3.protobuf.House.Data_Animal result = new com.SDJ3.protobuf.House.Data_Animal(this);
+        result.animalId_ = animalId_;
+        result.animalRegNum_ = animalRegNum_;
         result.date_ = date_;
         result.weight_ = weight_;
         result.origin_ = origin_;
@@ -1958,21 +2330,21 @@ public final class House {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.SDJ3.protobuf.House.Data) {
-          return mergeFrom((com.SDJ3.protobuf.House.Data)other);
+        if (other instanceof com.SDJ3.protobuf.House.Data_Animal) {
+          return mergeFrom((com.SDJ3.protobuf.House.Data_Animal)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.SDJ3.protobuf.House.Data other) {
-        if (other == com.SDJ3.protobuf.House.Data.getDefaultInstance()) return this;
-        if (other.getId() != 0L) {
-          setId(other.getId());
+      public Builder mergeFrom(com.SDJ3.protobuf.House.Data_Animal other) {
+        if (other == com.SDJ3.protobuf.House.Data_Animal.getDefaultInstance()) return this;
+        if (other.getAnimalId() != 0L) {
+          setAnimalId(other.getAnimalId());
         }
-        if (other.getRegNum() != 0L) {
-          setRegNum(other.getRegNum());
+        if (other.getAnimalRegNum() != 0L) {
+          setAnimalRegNum(other.getAnimalRegNum());
         }
         if (!other.getDate().isEmpty()) {
           date_ = other.date_;
@@ -2000,11 +2372,11 @@ public final class House {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.SDJ3.protobuf.House.Data parsedMessage = null;
+        com.SDJ3.protobuf.House.Data_Animal parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.SDJ3.protobuf.House.Data) e.getUnfinishedMessage();
+          parsedMessage = (com.SDJ3.protobuf.House.Data_Animal) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2014,64 +2386,64 @@ public final class House {
         return this;
       }
 
-      private long id_ ;
+      private long animalId_ ;
       /**
-       * <code>int64 Id = 1;</code>
-       * @return The id.
+       * <code>int64 animal_Id = 1;</code>
+       * @return The animalId.
        */
       @java.lang.Override
-      public long getId() {
-        return id_;
+      public long getAnimalId() {
+        return animalId_;
       }
       /**
-       * <code>int64 Id = 1;</code>
-       * @param value The id to set.
+       * <code>int64 animal_Id = 1;</code>
+       * @param value The animalId to set.
        * @return This builder for chaining.
        */
-      public Builder setId(long value) {
+      public Builder setAnimalId(long value) {
         
-        id_ = value;
+        animalId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 Id = 1;</code>
+       * <code>int64 animal_Id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearId() {
+      public Builder clearAnimalId() {
         
-        id_ = 0L;
+        animalId_ = 0L;
         onChanged();
         return this;
       }
 
-      private long regNum_ ;
+      private long animalRegNum_ ;
       /**
-       * <code>int64 regNum = 2;</code>
-       * @return The regNum.
+       * <code>int64 animal_regNum = 2;</code>
+       * @return The animalRegNum.
        */
       @java.lang.Override
-      public long getRegNum() {
-        return regNum_;
+      public long getAnimalRegNum() {
+        return animalRegNum_;
       }
       /**
-       * <code>int64 regNum = 2;</code>
-       * @param value The regNum to set.
+       * <code>int64 animal_regNum = 2;</code>
+       * @param value The animalRegNum to set.
        * @return This builder for chaining.
        */
-      public Builder setRegNum(long value) {
+      public Builder setAnimalRegNum(long value) {
         
-        regNum_ = value;
+        animalRegNum_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 regNum = 2;</code>
+       * <code>int64 animal_regNum = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRegNum() {
+      public Builder clearAnimalRegNum() {
         
-        regNum_ = 0L;
+        animalRegNum_ = 0L;
         onChanged();
         return this;
       }
@@ -2271,41 +2643,603 @@ public final class House {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Data)
+      // @@protoc_insertion_point(builder_scope:Data_Animal)
     }
 
-    // @@protoc_insertion_point(class_scope:Data)
-    private static final com.SDJ3.protobuf.House.Data DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:Data_Animal)
+    private static final com.SDJ3.protobuf.House.Data_Animal DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.SDJ3.protobuf.House.Data();
+      DEFAULT_INSTANCE = new com.SDJ3.protobuf.House.Data_Animal();
     }
 
-    public static com.SDJ3.protobuf.House.Data getDefaultInstance() {
+    public static com.SDJ3.protobuf.House.Data_Animal getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Data>
-        PARSER = new com.google.protobuf.AbstractParser<Data>() {
+    private static final com.google.protobuf.Parser<Data_Animal>
+        PARSER = new com.google.protobuf.AbstractParser<Data_Animal>() {
       @java.lang.Override
-      public Data parsePartialFrom(
+      public Data_Animal parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Data(input, extensionRegistry);
+        return new Data_Animal(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Data> parser() {
+    public static com.google.protobuf.Parser<Data_Animal> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Data> getParserForType() {
+    public com.google.protobuf.Parser<Data_Animal> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.SDJ3.protobuf.House.Data getDefaultInstanceForType() {
+    public com.SDJ3.protobuf.House.Data_Animal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Data_ProductOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Data_Product)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 product_id = 1;</code>
+     * @return The productId.
+     */
+    long getProductId();
+
+    /**
+     * <code>int64 product_regNum = 2;</code>
+     * @return The productRegNum.
+     */
+    long getProductRegNum();
+  }
+  /**
+   * Protobuf type {@code Data_Product}
+   */
+  public static final class Data_Product extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Data_Product)
+      Data_ProductOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Data_Product.newBuilder() to construct.
+    private Data_Product(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Data_Product() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Data_Product();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Data_Product(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              productId_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              productRegNum_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.SDJ3.protobuf.House.internal_static_Data_Product_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.SDJ3.protobuf.House.internal_static_Data_Product_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.SDJ3.protobuf.House.Data_Product.class, com.SDJ3.protobuf.House.Data_Product.Builder.class);
+    }
+
+    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
+    private long productId_;
+    /**
+     * <code>int64 product_id = 1;</code>
+     * @return The productId.
+     */
+    @java.lang.Override
+    public long getProductId() {
+      return productId_;
+    }
+
+    public static final int PRODUCT_REGNUM_FIELD_NUMBER = 2;
+    private long productRegNum_;
+    /**
+     * <code>int64 product_regNum = 2;</code>
+     * @return The productRegNum.
+     */
+    @java.lang.Override
+    public long getProductRegNum() {
+      return productRegNum_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (productId_ != 0L) {
+        output.writeInt64(1, productId_);
+      }
+      if (productRegNum_ != 0L) {
+        output.writeInt64(2, productRegNum_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (productId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, productId_);
+      }
+      if (productRegNum_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, productRegNum_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.SDJ3.protobuf.House.Data_Product)) {
+        return super.equals(obj);
+      }
+      com.SDJ3.protobuf.House.Data_Product other = (com.SDJ3.protobuf.House.Data_Product) obj;
+
+      if (getProductId()
+          != other.getProductId()) return false;
+      if (getProductRegNum()
+          != other.getProductRegNum()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProductId());
+      hash = (37 * hash) + PRODUCT_REGNUM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProductRegNum());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.SDJ3.protobuf.House.Data_Product parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.SDJ3.protobuf.House.Data_Product prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Data_Product}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Data_Product)
+        com.SDJ3.protobuf.House.Data_ProductOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.SDJ3.protobuf.House.internal_static_Data_Product_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.SDJ3.protobuf.House.internal_static_Data_Product_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.SDJ3.protobuf.House.Data_Product.class, com.SDJ3.protobuf.House.Data_Product.Builder.class);
+      }
+
+      // Construct using com.SDJ3.protobuf.House.Data_Product.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        productId_ = 0L;
+
+        productRegNum_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.SDJ3.protobuf.House.internal_static_Data_Product_descriptor;
+      }
+
+      @java.lang.Override
+      public com.SDJ3.protobuf.House.Data_Product getDefaultInstanceForType() {
+        return com.SDJ3.protobuf.House.Data_Product.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.SDJ3.protobuf.House.Data_Product build() {
+        com.SDJ3.protobuf.House.Data_Product result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.SDJ3.protobuf.House.Data_Product buildPartial() {
+        com.SDJ3.protobuf.House.Data_Product result = new com.SDJ3.protobuf.House.Data_Product(this);
+        result.productId_ = productId_;
+        result.productRegNum_ = productRegNum_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.SDJ3.protobuf.House.Data_Product) {
+          return mergeFrom((com.SDJ3.protobuf.House.Data_Product)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.SDJ3.protobuf.House.Data_Product other) {
+        if (other == com.SDJ3.protobuf.House.Data_Product.getDefaultInstance()) return this;
+        if (other.getProductId() != 0L) {
+          setProductId(other.getProductId());
+        }
+        if (other.getProductRegNum() != 0L) {
+          setProductRegNum(other.getProductRegNum());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.SDJ3.protobuf.House.Data_Product parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.SDJ3.protobuf.House.Data_Product) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long productId_ ;
+      /**
+       * <code>int64 product_id = 1;</code>
+       * @return The productId.
+       */
+      @java.lang.Override
+      public long getProductId() {
+        return productId_;
+      }
+      /**
+       * <code>int64 product_id = 1;</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductId(long value) {
+        
+        productId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 product_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProductId() {
+        
+        productId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long productRegNum_ ;
+      /**
+       * <code>int64 product_regNum = 2;</code>
+       * @return The productRegNum.
+       */
+      @java.lang.Override
+      public long getProductRegNum() {
+        return productRegNum_;
+      }
+      /**
+       * <code>int64 product_regNum = 2;</code>
+       * @param value The productRegNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductRegNum(long value) {
+        
+        productRegNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 product_regNum = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProductRegNum() {
+        
+        productRegNum_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Data_Product)
+    }
+
+    // @@protoc_insertion_point(class_scope:Data_Product)
+    private static final com.SDJ3.protobuf.House.Data_Product DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.SDJ3.protobuf.House.Data_Product();
+    }
+
+    public static com.SDJ3.protobuf.House.Data_Product getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Data_Product>
+        PARSER = new com.google.protobuf.AbstractParser<Data_Product>() {
+      @java.lang.Override
+      public Data_Product parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Data_Product(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Data_Product> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Data_Product> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.SDJ3.protobuf.House.Data_Product getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2322,10 +3256,15 @@ public final class House {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetDataResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Data_descriptor;
+    internal_static_Data_Animal_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Data_fieldAccessorTable;
+      internal_static_Data_Animal_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Data_Product_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Data_Product_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2336,12 +3275,17 @@ public final class House {
   static {
     java.lang.String[] descriptorData = {
       "\n\013House.proto\"\037\n\016GetDataRequest\022\r\n\005query" +
-      "\030\001 \001(\t\"&\n\017GetDataResponse\022\023\n\004data\030\001 \003(\0132" +
-      "\005.Data\"P\n\004Data\022\n\n\002Id\030\001 \001(\003\022\016\n\006regNum\030\002 \001" +
-      "(\003\022\014\n\004date\030\003 \001(\t\022\016\n\006weight\030\004 \001(\005\022\016\n\006orig" +
-      "in\030\005 \001(\t2J\n\016SlaughterHouse\0228\n\021GetDataAll" +
+      "\030\001 \001(\t\"L\n\017GetDataResponse\022\033\n\005data1\030\001 \003(\013" +
+      "2\014.Data_Animal\022\034\n\005data2\030\002 \003(\0132\r.Data_Pro" +
+      "duct\"e\n\013Data_Animal\022\021\n\tanimal_Id\030\001 \001(\003\022\025" +
+      "\n\ranimal_regNum\030\002 \001(\003\022\014\n\004date\030\003 \001(\t\022\016\n\006w" +
+      "eight\030\004 \001(\005\022\016\n\006origin\030\005 \001(\t\":\n\014Data_Prod" +
+      "uct\022\022\n\nproduct_id\030\001 \001(\003\022\026\n\016product_regNu" +
+      "m\030\002 \001(\0032\201\001\n\016SlaughterHouse\0226\n\021GetDataAll" +
       "Animals\022\017.GetDataRequest\032\020.GetDataRespon" +
-      "se\"\000B\023\n\021com.SDJ3.protobufb\006proto3"
+      "se\0227\n\022GetDataAllProducts\022\017.GetDataReques" +
+      "t\032\020.GetDataResponseB\023\n\021com.SDJ3.protobuf" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2358,13 +3302,19 @@ public final class House {
     internal_static_GetDataResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetDataResponse_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_Data_descriptor =
+        new java.lang.String[] { "Data1", "Data2", });
+    internal_static_Data_Animal_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_Data_fieldAccessorTable = new
+    internal_static_Data_Animal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Data_descriptor,
-        new java.lang.String[] { "Id", "RegNum", "Date", "Weight", "Origin", });
+        internal_static_Data_Animal_descriptor,
+        new java.lang.String[] { "AnimalId", "AnimalRegNum", "Date", "Weight", "Origin", });
+    internal_static_Data_Product_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Data_Product_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Data_Product_descriptor,
+        new java.lang.String[] { "ProductId", "ProductRegNum", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

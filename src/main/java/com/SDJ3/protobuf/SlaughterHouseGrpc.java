@@ -45,6 +45,37 @@ public final class SlaughterHouseGrpc {
     return getGetDataAllAnimalsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.SDJ3.protobuf.House.GetDataRequest,
+      com.SDJ3.protobuf.House.GetDataResponse> getGetDataAllProductsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDataAllProducts",
+      requestType = com.SDJ3.protobuf.House.GetDataRequest.class,
+      responseType = com.SDJ3.protobuf.House.GetDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.SDJ3.protobuf.House.GetDataRequest,
+      com.SDJ3.protobuf.House.GetDataResponse> getGetDataAllProductsMethod() {
+    io.grpc.MethodDescriptor<com.SDJ3.protobuf.House.GetDataRequest, com.SDJ3.protobuf.House.GetDataResponse> getGetDataAllProductsMethod;
+    if ((getGetDataAllProductsMethod = SlaughterHouseGrpc.getGetDataAllProductsMethod) == null) {
+      synchronized (SlaughterHouseGrpc.class) {
+        if ((getGetDataAllProductsMethod = SlaughterHouseGrpc.getGetDataAllProductsMethod) == null) {
+          SlaughterHouseGrpc.getGetDataAllProductsMethod = getGetDataAllProductsMethod =
+              io.grpc.MethodDescriptor.<com.SDJ3.protobuf.House.GetDataRequest, com.SDJ3.protobuf.House.GetDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDataAllProducts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.SDJ3.protobuf.House.GetDataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.SDJ3.protobuf.House.GetDataResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SlaughterHouseMethodDescriptorSupplier("GetDataAllProducts"))
+              .build();
+        }
+      }
+    }
+    return getGetDataAllProductsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class SlaughterHouseGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataAllAnimalsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getDataAllProducts(com.SDJ3.protobuf.House.GetDataRequest request,
+        io.grpc.stub.StreamObserver<com.SDJ3.protobuf.House.GetDataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataAllProductsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -109,6 +147,13 @@ public final class SlaughterHouseGrpc {
                 com.SDJ3.protobuf.House.GetDataRequest,
                 com.SDJ3.protobuf.House.GetDataResponse>(
                   this, METHODID_GET_DATA_ALL_ANIMALS)))
+          .addMethod(
+            getGetDataAllProductsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.SDJ3.protobuf.House.GetDataRequest,
+                com.SDJ3.protobuf.House.GetDataResponse>(
+                  this, METHODID_GET_DATA_ALL_PRODUCTS)))
           .build();
     }
   }
@@ -134,6 +179,14 @@ public final class SlaughterHouseGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDataAllAnimalsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getDataAllProducts(com.SDJ3.protobuf.House.GetDataRequest request,
+        io.grpc.stub.StreamObserver<com.SDJ3.protobuf.House.GetDataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDataAllProductsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -155,6 +208,13 @@ public final class SlaughterHouseGrpc {
     public com.SDJ3.protobuf.House.GetDataResponse getDataAllAnimals(com.SDJ3.protobuf.House.GetDataRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDataAllAnimalsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.SDJ3.protobuf.House.GetDataResponse getDataAllProducts(com.SDJ3.protobuf.House.GetDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDataAllProductsMethod(), getCallOptions(), request);
     }
   }
 
@@ -179,9 +239,18 @@ public final class SlaughterHouseGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDataAllAnimalsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.SDJ3.protobuf.House.GetDataResponse> getDataAllProducts(
+        com.SDJ3.protobuf.House.GetDataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDataAllProductsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_DATA_ALL_ANIMALS = 0;
+  private static final int METHODID_GET_DATA_ALL_PRODUCTS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -202,6 +271,10 @@ public final class SlaughterHouseGrpc {
       switch (methodId) {
         case METHODID_GET_DATA_ALL_ANIMALS:
           serviceImpl.getDataAllAnimals((com.SDJ3.protobuf.House.GetDataRequest) request,
+              (io.grpc.stub.StreamObserver<com.SDJ3.protobuf.House.GetDataResponse>) responseObserver);
+          break;
+        case METHODID_GET_DATA_ALL_PRODUCTS:
+          serviceImpl.getDataAllProducts((com.SDJ3.protobuf.House.GetDataRequest) request,
               (io.grpc.stub.StreamObserver<com.SDJ3.protobuf.House.GetDataResponse>) responseObserver);
           break;
         default:
@@ -266,6 +339,7 @@ public final class SlaughterHouseGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SlaughterHouseFileDescriptorSupplier())
               .addMethod(getGetDataAllAnimalsMethod())
+              .addMethod(getGetDataAllProductsMethod())
               .build();
         }
       }

@@ -3,7 +3,8 @@ syntax = "proto3";
 option java_package = "com.SDJ3.protobuf";
 
 service SlaughterHouse {
-    rpc GetDataAllAnimals(GetDataRequest) returns (GetDataResponse) {}
+    rpc GetDataAllAnimals (GetDataRequest) returns (GetDataResponse);
+    rpc GetDataAllProducts (GetDataRequest) returns (GetDataResponse);
 }
 
 message GetDataRequest {
@@ -11,13 +12,19 @@ message GetDataRequest {
 }
 
 message GetDataResponse {
-    repeated Data data = 1;
+    repeated Data_Animal data1 = 1;
+    repeated Data_Product data2 = 2;
 }
 
-message Data {
-    int64 Id = 1;
-    int64 regNum = 2;
+message Data_Animal{
+    int64 animal_Id = 1;
+    int64 animal_regNum = 2;
     string date = 3;
     int32 weight = 4;
     string origin = 5;
+}
+message Data_Product
+{
+    int64 product_id = 1;
+    int64 product_regNum = 2;
 }

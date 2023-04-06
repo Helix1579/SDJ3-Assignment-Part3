@@ -21,9 +21,9 @@ public class client
 
         for (House.Data data : response.getDataList())
         {
-            System.out.println(" Id --> " + data.getId() + "\n" + " regNum --> " + data.getRegNum()
-                    + "\n" + " date --> " + data.getDate() + "\n"  + " weight --> " + data.getWeight()
-                    + "\n" + " origin --> " + data.getOrigin());
+            System.out.println(" Id --> " + data.getId() + "\t" + " regNum --> " + data.getRegNum()
+                    + "\t" + " date --> " + data.getDate() + "\t"  + " weight --> " + data.getWeight()
+                    + "\t" + " origin --> " + data.getOrigin());
         }
         channel.shutdown();
     }

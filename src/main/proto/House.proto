@@ -38,4 +38,5 @@ message  Data_Product_Animal
     int64 product_id = 2;
     string animal_regNum = 3;
     string product_regNum = 4;
+    string origin = 5;
 }

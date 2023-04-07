@@ -37,9 +37,3 @@ VALUES
     (4, 'PROD-004', 2),
     (4, 'PROD-004', 5),
     (5, 'PROD-005', 1);
-
-SELECT animals.animal_id, animals.regNum AS animal_regNum, product.product_id, product.product_regNum
-FROM animals
-JOIN product
-ON animals.animal_id = product.animal_id
-ORDER BY animals.animal_id;

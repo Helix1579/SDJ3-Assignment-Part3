@@ -4114,6 +4114,18 @@ public final class House {
      */
     com.google.protobuf.ByteString
         getProductRegNumBytes();
+
+    /**
+     * <code>string origin = 5;</code>
+     * @return The origin.
+     */
+    java.lang.String getOrigin();
+    /**
+     * <code>string origin = 5;</code>
+     * @return The bytes for origin.
+     */
+    com.google.protobuf.ByteString
+        getOriginBytes();
   }
   /**
    * Protobuf type {@code Data_Product_Animal}
@@ -4130,6 +4142,7 @@ public final class House {
     private Data_Product_Animal() {
       animalRegNum_ = "";
       productRegNum_ = "";
+      origin_ = "";
     }
 
     @java.lang.Override
@@ -4182,6 +4195,12 @@ public final class House {
               java.lang.String s = input.readStringRequireUtf8();
 
               productRegNum_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              origin_ = s;
               break;
             }
             default: {
@@ -4316,6 +4335,44 @@ public final class House {
       }
     }
 
+    public static final int ORIGIN_FIELD_NUMBER = 5;
+    private volatile java.lang.Object origin_;
+    /**
+     * <code>string origin = 5;</code>
+     * @return The origin.
+     */
+    @java.lang.Override
+    public java.lang.String getOrigin() {
+      java.lang.Object ref = origin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        origin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string origin = 5;</code>
+     * @return The bytes for origin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOriginBytes() {
+      java.lang.Object ref = origin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        origin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4342,6 +4399,9 @@ public final class House {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productRegNum_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, productRegNum_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(origin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, origin_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4364,6 +4424,9 @@ public final class House {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productRegNum_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, productRegNum_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(origin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, origin_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4388,6 +4451,8 @@ public final class House {
           .equals(other.getAnimalRegNum())) return false;
       if (!getProductRegNum()
           .equals(other.getProductRegNum())) return false;
+      if (!getOrigin()
+          .equals(other.getOrigin())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4409,6 +4474,8 @@ public final class House {
       hash = (53 * hash) + getAnimalRegNum().hashCode();
       hash = (37 * hash) + PRODUCT_REGNUM_FIELD_NUMBER;
       hash = (53 * hash) + getProductRegNum().hashCode();
+      hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
+      hash = (53 * hash) + getOrigin().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4550,6 +4617,8 @@ public final class House {
 
         productRegNum_ = "";
 
+        origin_ = "";
+
         return this;
       }
 
@@ -4580,6 +4649,7 @@ public final class House {
         result.productId_ = productId_;
         result.animalRegNum_ = animalRegNum_;
         result.productRegNum_ = productRegNum_;
+        result.origin_ = origin_;
         onBuilt();
         return result;
       }
@@ -4640,6 +4710,10 @@ public final class House {
         }
         if (!other.getProductRegNum().isEmpty()) {
           productRegNum_ = other.productRegNum_;
+          onChanged();
+        }
+        if (!other.getOrigin().isEmpty()) {
+          origin_ = other.origin_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -4884,6 +4958,82 @@ public final class House {
         onChanged();
         return this;
       }
+
+      private java.lang.Object origin_ = "";
+      /**
+       * <code>string origin = 5;</code>
+       * @return The origin.
+       */
+      public java.lang.String getOrigin() {
+        java.lang.Object ref = origin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          origin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string origin = 5;</code>
+       * @return The bytes for origin.
+       */
+      public com.google.protobuf.ByteString
+          getOriginBytes() {
+        java.lang.Object ref = origin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          origin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string origin = 5;</code>
+       * @param value The origin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrigin(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        origin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string origin = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrigin() {
+        
+        origin_ = getDefaultInstance().getOrigin();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string origin = 5;</code>
+       * @param value The bytes for origin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        origin_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4979,16 +5129,16 @@ public final class House {
       "ta_Animal\022\021\n\tanimal_Id\030\001 \001(\003\022\025\n\ranimal_r" +
       "egNum\030\002 \001(\t\022\014\n\004date\030\003 \001(\t\022\016\n\006weight\030\004 \001(" +
       "\005\022\016\n\006origin\030\005 \001(\t\":\n\014Data_Product\022\022\n\npro" +
-      "duct_id\030\001 \001(\003\022\026\n\016product_regnum\030\002 \001(\t\"k\n" +
+      "duct_id\030\001 \001(\003\022\026\n\016product_regnum\030\002 \001(\t\"{\n" +
       "\023Data_Product_Animal\022\021\n\tanimal_Id\030\001 \001(\003\022" +
       "\022\n\nproduct_id\030\002 \001(\003\022\025\n\ranimal_regNum\030\003 \001" +
-      "(\t\022\026\n\016product_regNum\030\004 \001(\t2\275\001\n\016Slaughter" +
-      "House\0226\n\021GetDataAllAnimals\022\017.GetDataRequ" +
-      "est\032\020.GetDataResponse\0227\n\022GetDataAllProdu" +
-      "cts\022\017.GetDataRequest\032\020.GetDataResponse\022:" +
-      "\n\025GetDataAnimal_Product\022\017.GetDataRequest" +
-      "\032\020.GetDataResponseB\023\n\021com.SDJ3.protobufb" +
-      "\006proto3"
+      "(\t\022\026\n\016product_regNum\030\004 \001(\t\022\016\n\006origin\030\005 \001" +
+      "(\t2\275\001\n\016SlaughterHouse\0226\n\021GetDataAllAnima" +
+      "ls\022\017.GetDataRequest\032\020.GetDataResponse\0227\n" +
+      "\022GetDataAllProducts\022\017.GetDataRequest\032\020.G" +
+      "etDataResponse\022:\n\025GetDataAnimal_Product\022" +
+      "\017.GetDataRequest\032\020.GetDataResponseB\023\n\021co" +
+      "m.SDJ3.protobufb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5023,7 +5173,7 @@ public final class House {
     internal_static_Data_Product_Animal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Data_Product_Animal_descriptor,
-        new java.lang.String[] { "AnimalId", "ProductId", "AnimalRegNum", "ProductRegNum", });
+        new java.lang.String[] { "AnimalId", "ProductId", "AnimalRegNum", "ProductRegNum", "Origin", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -15,7 +15,7 @@ public class client
 
         String query1 = "SELECT * FROM assignment.animals";
         String query2 = "SELECT * FROM assignment.product";
-        String query3 = "SELECT assignment.animals.animal_id, assignment.product.product_id,  assignment.animals.animal_regNum,  assignment.product.product_regNum FROM\n" +
+        String query3 = "SELECT assignment.animals.animal_id, assignment.product.product_id,  assignment.animals.animal_regNum,  assignment.product.product_regNum, assignment.animals.origin FROM\n" +
                 "assignment.animals JOIN  assignment.product ON  assignment.animals.animal_id =  assignment.product.animal_id ORDER BY assignment.animals.animal_id;";
 
         // Animal get data
@@ -55,7 +55,7 @@ public class client
         for (House.Data_Product_Animal data : response.getData3List())
         {
             System.out.println(" animalId --> " + data.getAnimalId() + "\t" + " productId --> " + data.getProductId() + "\t"
-            + " product_regNum --> " + data.getProductRegNum() + "\t" + " animal_regNum --> " + data.getAnimalRegNum());
+            + " product_regNum --> " + data.getProductRegNum() + "\t" + " animal_regNum --> " + data.getAnimalRegNum() + "\t" + "animal_origin --> " + data.getOrigin());
         }
 
         System.out.println("\n\n\n");

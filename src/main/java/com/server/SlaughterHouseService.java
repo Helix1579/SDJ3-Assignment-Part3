@@ -128,9 +128,10 @@ public class SlaughterHouseService extends SlaughterHouseGrpc.SlaughterHouseImpl
                 long product_id = resultSet.getLong(2);
                 String animal_regNum = resultSet.getString(3);
                 String product_regNum = resultSet.getString(4);
+                String animal_origin = resultSet.getString(5);
 
                 House.Data_Product_Animal data = House.Data_Product_Animal.newBuilder().setAnimalId(animal_id)
-                        .setProductId(product_id).setAnimalRegNum(animal_regNum).setProductRegNum(product_regNum).build();
+                        .setProductId(product_id).setAnimalRegNum(animal_regNum).setProductRegNum(product_regNum).setOrigin(animal_origin).build();
 
                 dataList.add(data);
             }

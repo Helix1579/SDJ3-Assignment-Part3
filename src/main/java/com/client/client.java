@@ -16,7 +16,7 @@ public class client
         String query1 = "SELECT * FROM assignment.animals";
         String query2 = "SELECT * FROM assignment.product";
         String query3 = "SELECT assignment.animals.animal_id, assignment.product.product_id,  assignment.animals.animal_regNum,  assignment.product.product_regNum FROM\n" +
-                "assignment.animals JOIN  assignment.product ON  assignment.animals.animal_id =  assignment.product.animal_id;";
+                "assignment.animals JOIN  assignment.product ON  assignment.animals.animal_id =  assignment.product.animal_id ORDER BY assignment.animals.animal_id;";
 
         // Animal get data
         House.GetDataRequest requestAnimal = House.GetDataRequest.newBuilder().setQuery1(query1).build();

@@ -8,7 +8,7 @@ public class client
 {
     public static void main(String[] args)
     {
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8080)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 7263)
                 .usePlaintext().build();
 
         SlaughterHouseGrpc.SlaughterHouseBlockingStub stub = SlaughterHouseGrpc.newBlockingStub(channel);
@@ -27,7 +27,7 @@ public class client
         for (House.Data_Animal data : responseAnimal.getData1List())
         {
             System.out.println(" animalId --> " + data.getAnimalId() + "\t" + " regNum --> " + data.getAnimalRegNum()
-                    + "\t" + " date --> " + data.getDate() + "\t"  + " weight --> " + data.getWeight()
+                    + "\t" + " date --> " + data.getDate() + "\t"  + "weight --> " + data.getWeight()
                     + "\t" + " origin --> " + data.getOrigin());
         }
 

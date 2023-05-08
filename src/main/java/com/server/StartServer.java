@@ -9,7 +9,7 @@ public class StartServer
 {
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        Server server = ServerBuilder.forPort(8080).addService(new SlaughterHouseService()).build();
+        Server server = ServerBuilder.forPort(7263).addService(new SlaughterHouseService()).build();
         server.start();
         System.out.println("Server Started");
         server.awaitTermination();

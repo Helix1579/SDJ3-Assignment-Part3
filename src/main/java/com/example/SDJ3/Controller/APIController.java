@@ -16,11 +16,6 @@ public class APIController
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @GetMapping(value = "/")
-    public String getPage() {
-        return "Welcome";
-    }
-
     @GetMapping(value = "/animals")
     public List<Map<String, Object>> getAnimals()
     {

@@ -8,15 +8,17 @@ public class client
 {
     public static void main(String[] args)
     {
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8080)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090)
                 .usePlaintext().build();
 
         SlaughterHouseGrpc.SlaughterHouseBlockingStub stub = SlaughterHouseGrpc.newBlockingStub(channel);
 
-        String query1 = "SELECT * FROM assignment.animals";
-        String query2 = "SELECT * FROM assignment.product";
-        String query3 = "SELECT assignment.animals.animal_id, assignment.product.product_id,  assignment.animals.animal_regNum,  assignment.product.product_regNum, assignment.animals.origin FROM\n" +
-                "assignment.animals JOIN  assignment.product ON  assignment.animals.animal_id =  assignment.product.animal_id ORDER BY assignment.animals.animal_id;";
+        String query1 = "SELECT * FROM animals";
+        String query2 = "SELECT * FROM products";
+        String query3 = "SELECT animals.animal_id, products.product_id, animals.animal_reg_no,\n" +
+                "products.product_reg_no, animals.origin FROM\n" +
+                "animals JOIN products ON animals.animal_id = products.animal_id ORDER BY \n" +
+                "animals.animal_id;";
 
         // Animal get data
         House.GetDataRequest requestAnimal = House.GetDataRequest.newBuilder().setQuery1(query1).build();

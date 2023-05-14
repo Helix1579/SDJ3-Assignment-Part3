@@ -1,14 +1,16 @@
 package com.server;
 
-import com.SDJ3.protobuf.House;
-import com.SDJ3.protobuf.SlaughterHouseGrpc;
+import com.SDJ3.protobuf.*;
 import io.grpc.stub.StreamObserver;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SlaughterHouseService extends SlaughterHouseGrpc.SlaughterHouseImplBase
 {
+    //@Autowired private RabbitTemplate rabbitTemplate;
+
     //<------------------------------------------------------------------------------------------------------------------------------>
 
     @Override public void getDataAllAnimals(House.GetDataRequest request, StreamObserver<House.GetDataResponse> responseObserver)
@@ -19,9 +21,9 @@ public class SlaughterHouseService extends SlaughterHouseGrpc.SlaughterHouseImpl
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
-    private List<House.Data_Animal> executeAnimalQuery(String query)
+    public List<House.Data_Animal> executeAnimalQuery(String query)
     {
-        String url = "jdbc:postgresql://localhost:5432/postgres";
+        String url = "jdbc:postgresql://localhost:5432/SlaughterHouse";
         String username = "postgres";
         String password = "admin";
 
@@ -33,16 +35,20 @@ public class SlaughterHouseService extends SlaughterHouseGrpc.SlaughterHouseImpl
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
+            System.out.println("\n\n Animal query \n\n\n");
+
             while (resultSet.next())
             {
                 long animal_id = resultSet.getLong(1);
                 String regNum = resultSet.getString(2);
                 String date = resultSet.getString(3);
-                int weight = resultSet.getInt(4);
-                String origin = resultSet.getString(5);
+                int weight = resultSet.getInt(5);
+                String origin = resultSet.getString(4);
 
                 House.Data_Animal data = House.Data_Animal.newBuilder().setAnimalId(animal_id).setAnimalRegNum(regNum)
                         .setDate(date).setWeight(weight).setOrigin(origin).build();
+
+
 
                 dataList.add(data);
             }
@@ -66,7 +72,7 @@ public class SlaughterHouseService extends SlaughterHouseGrpc.SlaughterHouseImpl
     }
     private List<House.Data_Product> executeProductQuery(String query)
     {
-        String url = "jdbc:postgresql://localhost:5432/postgres";
+        String url = "jdbc:postgresql://localhost:5432/SlaughterHouse";
         String username = "postgres";
         String password = "admin";
 
@@ -111,7 +117,7 @@ public class SlaughterHouseService extends SlaughterHouseGrpc.SlaughterHouseImpl
     private List<House.Data_Product_Animal> executeAnimalProductQuery(String query)
     {
 
-        String url = "jdbc:postgresql://localhost:5432/postgres";
+        String url = "jdbc:postgresql://localhost:5432/SlaughterHouse";
         String username = "postgres";
         String password = "admin";
 

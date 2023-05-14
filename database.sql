@@ -9,10 +9,10 @@ CREATE TABLE animals (
                          origin VARCHAR(50)
 );
 
-CREATE TABLE product (
+CREATE TABLE products (
                          product_id INT,
-                         product_regNum VARCHAR(20),
                          animal_id INT,
+                         product_reg_no VARCHAR
                          FOREIGN KEY (animal_id) REFERENCES animals(animal_id)
 );
 
@@ -25,7 +25,7 @@ VALUES
     (5, 'REG-005', '2022-03-15', 110.8, 'Canada');
 
 
-INSERT INTO product (product_id, product_regNum, animal_id)
+INSERT INTO products (product_id, product_reg_no, animal_id)
 VALUES
     (1, 'PROD-001', 1),
     (1, 'PROD-001', 2),
